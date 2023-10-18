@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Feed</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="myprofile.html" id="myProfileButton" class="button"
+        >My Profile</a
+      >
+      <a href="feed.html">Feed</a>
+      <button id="logoutButton">Logout</button>
+    </header>
+    <main>
+      <form id="post-form">
+        <h2>Create a Post</h2>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required /><br /><br />
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" required></textarea><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <h1>Your Feed</h1>
+      <div id="button-container">
+        <button id="viewFollowedPostsBtn">View Followed Posts</button>
+        <button id="viewAllPostsBtn">View All Posts</button>
+      </div>
+
+      <div id="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search feed..."
+          onkeyup="search()"
+        />
+      </div>
+
+      <div id="posts-container"></div>
+      <button id="load-more">Load More</button>
+    </main>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/feed.js" type="module"></script>
+  </body>
+</html>

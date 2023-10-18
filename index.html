@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/authstyle.css" />
+  </head>
+  <body>
+    <main>
+      <form id="loginForm">
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Email (@noroff.no or @stud.noroff.no)"
+          required
+          pattern=".+@(noroff\.no|stud\.noroff\.no)$"
+        />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+
+      <form id="registrationForm">
+        <input
+          type="text"
+          id="name"
+          placeholder="Username"
+          required
+          pattern="^[a-zA-Z0-9_]+$"
+          title="No punctuation symbols except underscore."
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="Email (@noroff.no or @stud.noroff.no)"
+          required
+          pattern=".+@(noroff\.no|stud\.noroff\.no)$"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+          minlength="8"
+        />
+
+        <input type="url" id="avatar" placeholder="Avatar URL (optional)" />
+        <input type="url" id="banner" placeholder="Banner URL (optional)" />
+        <button type="submit">Register</button>
+      </form>
+    </main>
+    <script src="js/auth.js" type="module"></script>
+  </body>
+</html>
